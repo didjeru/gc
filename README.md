@@ -1,2 +1,2 @@
 # gc
-## https://github.com/didjeru/gc
+## go course
