@@ -1,4 +1,4 @@
-# geekbrains gc
-## go course
+# GH
+## gc
 
 [Link to Git](https://github.com/didjeru/gc)
