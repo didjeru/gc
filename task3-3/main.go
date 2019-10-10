@@ -20,7 +20,13 @@ func main() {
 	data, err := ioutil.ReadFile("data.json")
 
 	if err == nil {
-		json.Unmarshal(data, &addressBook)
+		err = json.Unmarshal(data, &addressBook)
+
+		if err != nil {
+			fmt.Println("Can not parse data.json")
+		}
+	} else {
+		fmt.Println("Can not read the file data.json")
 	}
 
 	fmt.Println("Current data:", addressBook)
