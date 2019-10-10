@@ -11,17 +11,17 @@ type car struct {
 	box           int
 	isEngineRun   bool
 	isWindowsOpen bool
-	boxPercent    string
+	boxPercent    float32
 }
 
 func printCar(car car) {
-	fmt.Println("Тип автомобиля: ", car.types)
-	fmt.Println("Марка автомобиля: ", car.model)
-	fmt.Println("Год выпуска: ", car.year)
-	fmt.Println("Объем багажника: ", car.box)
-	fmt.Println("Двигатель запущен: ", car.isEngineRun)
-	fmt.Println("Окна открыты: ", car.isWindowsOpen)
-	fmt.Println("Багажник заполнен: ", car.boxPercent)
+	fmt.Println("Тип автомобиля:", car.types)
+	fmt.Println("Марка автомобиля:", car.model)
+	fmt.Println("Год выпуска:", car.year)
+	fmt.Println("Объем багажника:", car.box)
+	fmt.Println("Двигатель запущен:", car.isEngineRun)
+	fmt.Println("Окна открыты:", car.isWindowsOpen)
+	fmt.Println("Багажник заполнен на:", car.boxPercent, "%")
 }
 
 func main() {
@@ -32,7 +32,7 @@ func main() {
 		box:           500,
 		isEngineRun:   true,
 		isWindowsOpen: false,
-		boxPercent:    "50%",
+		boxPercent:    50.25,
 	}
 	gazAuto := car{
 		types:         "Легковой",
@@ -41,7 +41,7 @@ func main() {
 		box:           100,
 		isEngineRun:   false,
 		isWindowsOpen: true,
-		boxPercent:    "10%",
+		boxPercent:    10.08,
 	}
 
 	fmt.Println(zilAuto.model)
