@@ -26,9 +26,9 @@ func (a aircraft) move() {
 }
 
 func main() {
-	var zil vehicle = car{}
-	var boing vehicle = aircraft{}
-	var vl80 vehicle = train{}
+	zil := car{}
+	boing := aircraft{}
+	vl80 := train{}
 
 	zil.move()
 	boing.move()
