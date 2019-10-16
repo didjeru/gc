@@ -28,6 +28,7 @@ func (cb *ChessBoard) isPointExists(point *point.Point) bool {
 	for _, chessBoardPoint := range cb.points {
 		if chessBoardPoint.X == point.X && chessBoardPoint.Y == point.Y {
 			isAvailablePoint = true
+			break
 		}
 	}
 
