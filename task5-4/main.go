@@ -12,7 +12,9 @@ func copyFile(source, destination string) (err error) {
 	if err != nil {
 		return err
 	}
+
 	defer src.Close()
+
 	fi, err := src.Stat()
 	if err != nil {
 		return err
@@ -23,21 +25,15 @@ func copyFile(source, destination string) (err error) {
 	if err != nil {
 		return err
 	}
+
 	defer dst.Close()
+
 	_, err = io.Copy(dst, src)
 	if err != nil {
-		dst.Close()
 		os.Remove(destination)
 		return err
 	}
-	err = dst.Close()
-	if err != nil {
-		return err
-	}
-	err = src.Close()
-	if err != nil {
-		return err
-	}
+
 	return nil
 }
 
