@@ -2,6 +2,7 @@ package main
 
 import (
 	"io"
+	"log"
 	"net/http"
 )
 
@@ -24,5 +25,8 @@ func hello(res http.ResponseWriter, req *http.Request) {
 
 func main() {
 	http.HandleFunc("/hello", hello)
-	http.ListenAndServe(":3000", nil)
+	err := http.ListenAndServe(":3000", nil)
+	if err != nil {
+		log.Fatalf("Error: %s", err)
+	}
 }

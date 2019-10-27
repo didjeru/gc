@@ -32,5 +32,8 @@ func main() {
 
 	defer file.Close()
 
-	png.Encode(file, img)
+	err = png.Encode(file, img)
+	if err != nil {
+		log.Fatalf("Cannot encode png: %s", err)
+	}
 }

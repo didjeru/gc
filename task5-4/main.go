@@ -7,13 +7,17 @@ import (
 	"os"
 )
 
+func printError(err error) {
+	if err != nil {
+		fmt.Println(err)
+	}
+}
+
 func copyFile(source, destination string) (err error) {
 	src, err := os.Open(source)
 	if err != nil {
 		return err
 	}
-
-	defer src.Close()
 
 	fi, err := src.Stat()
 	if err != nil {
@@ -26,13 +30,18 @@ func copyFile(source, destination string) (err error) {
 		return err
 	}
 
-	defer dst.Close()
-
 	_, err = io.Copy(dst, src)
 	if err != nil {
 		os.Remove(destination)
 		return err
 	}
+
+	defer func() {
+		err := src.Close()
+		printError(err)
+		err = dst.Close()
+		printError(err)
+	}()
 
 	return nil
 }
