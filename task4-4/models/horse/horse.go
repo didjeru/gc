@@ -1,7 +1,7 @@
 package horse
 
 import (
-	"gc/task4-4/models/point"
+	"./models/point"
 )
 
 // Horse Фигура коня
