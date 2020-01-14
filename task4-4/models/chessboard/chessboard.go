@@ -3,8 +3,8 @@ package chessboard
 import (
 	"errors"
 	"fmt"
-	"../models/horse"
-	"../models/point"
+	"./horse"
+	"./point"
 	"strconv"
 )
 
