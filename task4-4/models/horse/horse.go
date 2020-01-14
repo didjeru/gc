@@ -1,7 +1,7 @@
 package horse
 
 import (
-	"./models/point"
+	"./point"
 )
 
 // Horse Фигура коня
