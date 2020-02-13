@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"gc/task4-4/models/chessboard"
+	"./models/chessboard"
 	"os"
 	"strings"
 )

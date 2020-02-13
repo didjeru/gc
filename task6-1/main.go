@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"task6-1/statistic"
+	"./statistic"
 )
 
 func main() {

@@ -3,7 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"gc/task4-3/calculator"
+	"./calculator"
 	"os"
 )
 
