@@ -7,11 +7,13 @@ import (
 	"sync"
 )
 
+//Server - Interface for server
 type Server interface {
 	Start() error
 	Stop() error
 }
 
+//Config - config for server
 type Config struct {
 	Port string
 }
@@ -30,6 +32,7 @@ type server struct {
 	done     chan struct{}
 }
 
+// New - make server
 func New(cfg *Config) Server {
 	return &server{
 		clients:  make(map[net.Conn]struct{}),
