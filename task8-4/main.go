@@ -1,11 +1,12 @@
 package main
 
 import (
-	"gc/task8-4/server"
 	"log"
 	"os"
 	"os/signal"
 	"syscall"
+
+	"./server"
 )
 
 func main() {
